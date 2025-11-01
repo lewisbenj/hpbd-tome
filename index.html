@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật Nguyễn Võ Chí Nguyện</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/tone@14.8.49/build/Tone.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="main-content" class="flex flex-col items-center justify-center p-4">
+
+        <div id="countdown" class="text-7xl font-extrabold text-white tracking-widest bg-orange-500 rounded-full w-48 h-48 flex items-center justify-center shadow-2xl animate-pulse">
+        </div>
+
+        <div id="gift-box" class="flex flex-col items-center justify-center" onclick="handleGiftClick()">
+            <p class="text-xl mb-6 font-semibold text-pink-300 animate-bounce">Nhấp vào Hộp quà nào!</p>
+            <div class="gift-box-main">
+                <div class="gift-box-body"></div>
+                <div class="ribbon-vertical"></div>
+                <div class="ribbon-horizontal"></div>
+                <div class="gift-box-lid"></div>
+                <div class="ribbon-bow"></div>
+            </div>
+        </div>
+
+        <div id="cake-container" class="flex flex-col items-center justify-center transform scale-0 transition duration-500">
+            
+            <h1 class="text-8xl font-black text-red-500 mb-6 tracking-tight animate-bounce">
+                Happy Birthday!
+            </h1>
+            <p class="text-5xl font-extrabold mb-10 text-yellow-200 [text-shadow:0_0_15px_#facc15,0_0_25px_#ffeb3b] animate-pulse">
+                Chúc Mừng Sinh Nhật Nguyễn Võ Chí Nguyện!
+            </p>
+
+            <div class="cake">
+                <div class="cake-top"></div>
+                <div class="cake-icing"></div>
+                <div class="cake-base"></div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+            
+            <div id="surprise-message" class="mt-8 text-2xl font-semibold text-white opacity-0 transition duration-1000">
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="surprise-overlay" class="fixed inset-0 pointer-events-none z-50"></div>
+</body>
+</html>
